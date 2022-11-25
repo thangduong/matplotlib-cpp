@@ -81,6 +81,10 @@ add_executable(subplot2grid examples/subplot2grid.cpp)
 target_link_libraries(subplot2grid PRIVATE matplotlib_cpp)
 set_target_properties(subplot2grid PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
+add_executable(subplot examples/subplot.cpp)
+target_link_libraries(subplot PRIVATE matplotlib_cpp)
+set_target_properties(subplot PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+
 add_executable(lines3d examples/lines3d.cpp)
 target_link_libraries(lines3d PRIVATE matplotlib_cpp)
 set_target_properties(lines3d PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")

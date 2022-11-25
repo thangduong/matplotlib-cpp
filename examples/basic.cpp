@@ -1,6 +1,8 @@
 #define _USE_MATH_DEFINES
 #include <iostream>
 #include <cmath>
+#include <stdio.h>
+#include <unistd.h>
 #include "../matplotlibcpp.h"
 
 namespace plt = matplotlibcpp;
@@ -41,4 +43,9 @@ int main()
     const char* filename = "./basic.png";
     std::cout << "Saving result to " << filename << std::endl;;
     plt::save(filename);
+    plt::show(false);
+    while (true) {
+        sleep(1);
+        printf("got one\r\n");
+    }
 }
